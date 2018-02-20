@@ -1,0 +1,9 @@
+#!/bin/sh
+
+find -L data/ \
+	-type f \
+	-name "*.fastq.gz" \
+| sed -r \
+	-e 's#^data/#results/#g' \
+	-e 's#\.fastq\.gz$#.subset.fastq.gz#g'
+
