@@ -11,5 +11,5 @@ find -L data/ \
 	-name "*.fastq.gz" \
 | sed -r \
 	-e 's#^data/#results/#' \
-	-e 's#\.fastq\.gz$#-subset.fastq.gz#'
+	-e 's#\.fastq\.gz$#.subset.fastq.gz#'
 
