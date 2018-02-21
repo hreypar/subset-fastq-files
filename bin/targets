@@ -1,9 +1,15 @@
-#!/bin/sh
+#!/bin/bash
 
+# obtain number of reads to subsample.
+#
+#source config.mk
+
+# subset these fastq files.
+#
 find -L data/ \
 	-type f \
 	-name "*.fastq.gz" \
 | sed -r \
-	-e 's#^data/#results/#g' \
-	-e 's#\.fastq\.gz$#.subset.fastq.gz#g'
+	-e 's#^data/#results/#' \
+	-e 's#\.fastq\.gz$#-subset.fastq.gz#'
 
